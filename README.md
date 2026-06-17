@@ -1,16 +1,45 @@
-# React + Vite
+# Kibab : plat des dieux
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application web de gestion de recettes de kebab, réalisée en React + Vite dans le cadre d'un partiel de développement JavaScript.
 
-Currently, two official plugins are available:
+## Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Ajout de recettes** : saisir un nom et des ingrédients pour créer une recette
+- **Envoi en cuisine** : envoyer une recette en cuisine avec une sauce au choix
+- **Suivi en temps réel** : chronomètre qui s'incrémente chaque seconde pour chaque commande en cuisine, avec horodatage via l'API [timeapi.io](https://timeapi.io) (heure de Paris)
+- **Validation / suppression** : valider une commande (la retire des deux listes) ou la supprimer indépendamment
+- **Persistance** : les recettes et les commandes en cuisine sont sauvegardées dans le `localStorage`
 
-## React Compiler
+## Stack technique
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React 19](https://react.dev/)
+- [Vite 8](https://vite.dev/)
+- [Tailwind CSS 4](https://tailwindcss.com/)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+## Lancer en développement
+
+```bash
+npm run dev
+```
+
+## Build de production
+
+```bash
+npm run build
+npm run preview
+```
+
+## Structure
+
+```
+src/
+├── App.jsx       # Composant principal (logique + UI)
+├── App.css       # Styles globaux
+└── main.jsx      # Point d'entrée React
+```
